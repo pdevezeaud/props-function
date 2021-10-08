@@ -1,4 +1,5 @@
 import { Component } from "react";
+import Toto from "./Toto";
 
 class Maman extends Component {
 
@@ -8,7 +9,11 @@ class Maman extends Component {
     }
 
 
-    
+    ordreMaman = () => {
+        this.setState({
+            messageMaman: "Va ranger ta chambre"
+        })
+    }
 
 
     render() {
@@ -16,9 +21,11 @@ class Maman extends Component {
             <div>
 
                 <h1>Je suis la Maman</h1>
-                <button>Ordre de la Mére</button>
-                <p></p>
+                <button onClick={this.ordreMaman}>Ordre de la Mére</button>
+                <p>{this.state.messageMaman}</p>
                 <hr />
+
+                <Toto name ='Je suis Toto' />
 
             </div>
         )
