@@ -16,6 +16,13 @@ class Maman extends Component {
     }
 
 
+    reponseToto = () => {
+        this.setState({
+            messageToto: "je vais le faire de suite Maman"
+        })
+    }
+
+
     render() {
         return (
             <div>
@@ -25,7 +32,7 @@ class Maman extends Component {
                 <p>{this.state.messageMaman}</p>
                 <hr />
 
-                <Toto name ='Je suis Toto' />
+                <Toto name ='Je suis Toto' reponseToto={this.reponseToto} leState = {this.state} />
 
             </div>
         )
